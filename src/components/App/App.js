@@ -3,7 +3,7 @@ import PropTypes, { shape, func, string } from 'prop-types';
 import logo from './logo.svg';
 import './App.css';
 import { connect } from 'react-redux';
-import { fakeAction } from '../../actions';
+import { fakeAction, initFetchAction } from '../../actions';
 class App extends Component {
   
   componentDidMount() {
@@ -35,8 +35,9 @@ App.propTypes = {
 
 const mapStateToProps = ({ fake }) => ({ fake });
 
-const mapDispatchToProps = dispatch => ({ fakeAction:
-  () => dispatch(fakeAction())
+const mapDispatchToProps = dispatch => (
+  { fakeAction: () => dispatch(fakeAction()),
+    initFetch: () => dispatch(initFetchAction())
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);
