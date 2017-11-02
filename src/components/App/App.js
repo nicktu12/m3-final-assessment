@@ -11,13 +11,9 @@ class App extends Component {
     this.props.initFetch();
   }
 
-  renderCards = (houseArray) => {
-    return houseArray.map((house, index) => {
-      return(
-        <Card houseInfo={house} /> 
-      )
-    })
-  }
+  renderCards = (houseArray) => (
+    houseArray.map((house, index) => <Card houseInfo={house} />)
+  )
 
   render() {
     return (
@@ -31,7 +27,7 @@ class App extends Component {
           }}> FAKE ACTION</button>
         </div>
         <div className='Display-info'>
-          {this.renderCards([1,2,3])}
+          {this.props.houseData && this.renderCards(this.props.houseData)}
         </div>
       </div>
     );
@@ -43,7 +39,9 @@ App.propTypes = {
   fakeAction: func.isRequired
 };
 
-const mapStateToProps = ({ fake }) => ({ fake });
+const mapStateToProps = store => (
+  { houseData: store.houses }
+)
 
 const mapDispatchToProps = dispatch => (
   { fakeAction: () => dispatch(fakeAction()),
