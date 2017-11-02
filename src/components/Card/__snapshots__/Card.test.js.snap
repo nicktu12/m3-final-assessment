@@ -1,0 +1,420 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`card should match snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Card
+    houseInfo={
+        Object {
+            "ancestralWeapons": Array [
+              "",
+            ],
+            "cadetBranches": Array [],
+            "coatOfArms": "A golden wreath, on a blue field with a gold border(Azure, a garland of laurel within a bordure or)",
+            "currentLord": "",
+            "diedOut": "",
+            "founded": "",
+            "founder": "",
+            "heir": "",
+            "name": "House Algood",
+            "overlord": "https://www.anapioficeandfire.com/api/houses/229",
+            "region": "The Westerlands",
+            "seats": Array [
+              "",
+            ],
+            "swornMembers": Array [],
+            "titles": Array [
+              "",
+            ],
+            "url": "https://www.anapioficeandfire.com/api/houses/1",
+            "words": "",
+          }
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": null,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <h3>
+          House Algood
+</h3>,
+        "",
+        <p>
+          <span>
+                    House Seat:
+          </span>
+           
+          
+</p>,
+        <p>
+          <span>
+                    Titles:
+          </span>
+           
+          
+</p>,
+        <p>
+          <span>
+                    Coat of Arms:
+          </span>
+           
+          A golden wreath, on a blue field with a gold border(Azure, a garland of laurel within a bordure or)
+</p>,
+        <p>
+          <span>
+                    Ancestral Weapons:
+          </span>
+           
+          
+</p>,
+        "",
+      ],
+      "className": "cards",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": null,
+        "nodeType": "host",
+        "props": Object {
+          "children": "House Algood",
+        },
+        "ref": null,
+        "rendered": "House Algood",
+        "type": "h3",
+      },
+      "",
+      Object {
+        "instance": null,
+        "key": null,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <span>
+              House Seat:
+</span>,
+            " ",
+            "",
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "host",
+            "props": Object {
+              "children": "House Seat:",
+            },
+            "ref": null,
+            "rendered": "House Seat:",
+            "type": "span",
+          },
+          " ",
+          "",
+        ],
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": null,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <span>
+              Titles:
+</span>,
+            " ",
+            "",
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Titles:",
+            },
+            "ref": null,
+            "rendered": "Titles:",
+            "type": "span",
+          },
+          " ",
+          "",
+        ],
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": null,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <span>
+              Coat of Arms:
+</span>,
+            " ",
+            "A golden wreath, on a blue field with a gold border(Azure, a garland of laurel within a bordure or)",
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Coat of Arms:",
+            },
+            "ref": null,
+            "rendered": "Coat of Arms:",
+            "type": "span",
+          },
+          " ",
+          "A golden wreath, on a blue field with a gold border(Azure, a garland of laurel within a bordure or)",
+        ],
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": null,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <span>
+              Ancestral Weapons:
+</span>,
+            " ",
+            "",
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Ancestral Weapons:",
+            },
+            "ref": null,
+            "rendered": "Ancestral Weapons:",
+            "type": "span",
+          },
+          " ",
+          "",
+        ],
+        "type": "p",
+      },
+      "",
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": null,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h3>
+            House Algood
+</h3>,
+          "",
+          <p>
+            <span>
+                        House Seat:
+            </span>
+             
+            
+</p>,
+          <p>
+            <span>
+                        Titles:
+            </span>
+             
+            
+</p>,
+          <p>
+            <span>
+                        Coat of Arms:
+            </span>
+             
+            A golden wreath, on a blue field with a gold border(Azure, a garland of laurel within a bordure or)
+</p>,
+          <p>
+            <span>
+                        Ancestral Weapons:
+            </span>
+             
+            
+</p>,
+          "",
+        ],
+        "className": "cards",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "host",
+          "props": Object {
+            "children": "House Algood",
+          },
+          "ref": null,
+          "rendered": "House Algood",
+          "type": "h3",
+        },
+        "",
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <span>
+                House Seat:
+</span>,
+              " ",
+              "",
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": null,
+              "nodeType": "host",
+              "props": Object {
+                "children": "House Seat:",
+              },
+              "ref": null,
+              "rendered": "House Seat:",
+              "type": "span",
+            },
+            " ",
+            "",
+          ],
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <span>
+                Titles:
+</span>,
+              " ",
+              "",
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": null,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Titles:",
+              },
+              "ref": null,
+              "rendered": "Titles:",
+              "type": "span",
+            },
+            " ",
+            "",
+          ],
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <span>
+                Coat of Arms:
+</span>,
+              " ",
+              "A golden wreath, on a blue field with a gold border(Azure, a garland of laurel within a bordure or)",
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": null,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Coat of Arms:",
+              },
+              "ref": null,
+              "rendered": "Coat of Arms:",
+              "type": "span",
+            },
+            " ",
+            "A golden wreath, on a blue field with a gold border(Azure, a garland of laurel within a bordure or)",
+          ],
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <span>
+                Ancestral Weapons:
+</span>,
+              " ",
+              "",
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": null,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Ancestral Weapons:",
+              },
+              "ref": null,
+              "rendered": "Ancestral Weapons:",
+              "type": "span",
+            },
+            " ",
+            "",
+          ],
+          "type": "p",
+        },
+        "",
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactFifteenAdapter {
+      "options": Object {
+        "supportPrevContextArgumentOfComponentDidUpdate": true,
+      },
+    },
+  },
+}
+`;
