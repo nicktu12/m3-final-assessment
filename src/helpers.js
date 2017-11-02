@@ -1,10 +1,10 @@
 export const fetchHelper = (url) => {
   return fetch(url)
     .then(res => res.json())
-    .then(parseRes => parseRes)
-}
+    .then(parseRes => parseRes);
+};
 
-export const arrayCleaner = (array) => array.join(', ')
+export const arrayCleaner = (array) => array.join(', ');
 
 export const swornApi = (array) => {
   return array.map(house => {
@@ -17,16 +17,16 @@ export const swornApi = (array) => {
         },
         body: JSON.stringify({ url: member })
       })
-      .then(res=>res.json())
-      .then(parseRes=>swornArray.push(parseRes))
-      .catch(e=>alert(e))
-      return swornArray
-    })
-  })
-}
+        .then(res=>res.json())
+        .then(parseRes=>swornArray.push(parseRes))
+        .catch(e=>alert(e));
+      return swornArray;
+    });
+  });
+};
 
 export const masher = (arr1, arr2) => {
   return arr1.map((arr, index)=>{
-    return Object.assign({}, arr1[index], {swornMembers: arr2[index]}) 
-  })
-}
+    return Object.assign({}, arr1[index], {swornMembers: arr2[index]});
+  });
+};

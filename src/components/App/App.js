@@ -11,7 +11,7 @@ class App extends Component {
 
     this.state = {
       selected: []
-    }
+    };
   } 
   componentDidMount() {
     this.props.initFetch();
@@ -21,8 +21,8 @@ class App extends Component {
     !this.state.selected.length ?
       this.setState({selected: [index]}) :
       this.state.selected.includes(index) ?
-      this.setState({selected: []}) :
-      this.setState({selected: [index]})
+        this.setState({selected: []}) :
+        this.setState({selected: [index]});
   }
 
   renderCards = (houseArray) => (
@@ -31,10 +31,12 @@ class App extends Component {
       <div className={this.state.selected.includes(index) ? 'selected' : 'not-selected'} onClick={()=>this.selectCard(index)} key={'House Card ' + index} >
         <Card houseInfo={house} />
       </div>
-      )
-    )
+    ))
   )
   
+  renderLoading = () => {
+    return (<img src={require('./wolf.gif')} alt='loading icon' />);
+  }
 
   render() {
     return (
@@ -44,7 +46,7 @@ class App extends Component {
           <h2>Welcome to Westeros</h2>
         </div>
         <div className='Display-info'>
-          {this.props.houseData.length ? this.renderCards(this.props.houseData) : <p>hey</p>}
+          {this.props.houseData.length ? this.renderCards(this.props.houseData) : this.renderLoading()}
         </div>
       </div>
     );
