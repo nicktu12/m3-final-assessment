@@ -11,6 +11,9 @@ const Card = (house) => {
       <p><span>Coat of Arms:</span> {house.houseInfo.coatOfArms}</p>
       <p><span>Ancestral Weapons:</span> {arrayCleaner(house.houseInfo.ancestralWeapons)}</p>
       { house.houseInfo.words && <p><span>House Words:</span> "{house.houseInfo.words}"</p> }
+      <section>
+        <p>Sworn Members: </p>
+      </section>
     </div>
   )
 }
