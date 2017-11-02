@@ -5,6 +5,10 @@ import './App.css';
 import { connect } from 'react-redux';
 import { fakeAction } from '../../actions';
 class App extends Component {
+  
+  componentDidMount() {
+    this.props.initFetch();
+  }
 
   render() {
     return (
@@ -30,7 +34,9 @@ App.propTypes = {
 };
 
 const mapStateToProps = ({ fake }) => ({ fake });
+
 const mapDispatchToProps = dispatch => ({ fakeAction:
   () => dispatch(fakeAction())
 });
+
 export default connect(mapStateToProps, mapDispatchToProps)(App);
