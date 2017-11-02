@@ -1,16 +1,39 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #555;
-  text-shadow: 0px 0px 21px #999;
+  background-color: #5B85AA;
+}
+
+h2 {
+  font-family: fantasy;
 }
 
 .cards {
-  width: 200px;
+  width: 300px;
+  background-color: #372248;
+  color: #FBC5B5;
+  border: 5px solid #5B85AA;
+  margin-bottom: 15px;
+}
+
+.cards h3 {
+  font-family: fantasy;
+  padding: 5px;
+  font-size: 24px;
 }
 
 .Display-info {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+}
+
+.cards p {
+  text-align: left;
+  padding-left: 10px;
+  font-family: serif;
+}
+
+.cards p span {
+  font-family: sans-serif;
 }
