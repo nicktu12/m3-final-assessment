@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes, { shape, func, string } from 'prop-types';
 import logo from './logo.svg';
 import './App.css';
+import Card from '../Card/Card';
 import { connect } from 'react-redux';
 import { fakeAction, initFetchAction } from '../../actions';
 class App extends Component {
@@ -9,6 +10,10 @@ class App extends Component {
   componentDidMount() {
     this.props.initFetch();
   }
+
+  renderCards = (houseArray) => (
+    houseArray.map((house, index) => <Card houseInfo={house} />)
+  )
 
   render() {
     return (
@@ -22,6 +27,7 @@ class App extends Component {
           }}> FAKE ACTION</button>
         </div>
         <div className='Display-info'>
+          {this.props.houseData && this.renderCards(this.props.houseData)}
         </div>
       </div>
     );
@@ -33,7 +39,9 @@ App.propTypes = {
   fakeAction: func.isRequired
 };
 
-const mapStateToProps = ({ fake }) => ({ fake });
+const mapStateToProps = store => (
+  { houseData: store.houses }
+)
 
 const mapDispatchToProps = dispatch => (
   { fakeAction: () => dispatch(fakeAction()),
