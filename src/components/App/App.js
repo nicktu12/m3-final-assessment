@@ -6,15 +6,35 @@ import Card from '../Card/Card';
 import { connect } from 'react-redux';
 import { initFetchAction } from '../../actions';
 class App extends Component {
-  
+  constructor(){
+    super();
+
+    this.state = {
+      selected: []
+    }
+  } 
   componentDidMount() {
     this.props.initFetch();
   }
 
+  selectCard = (index) => {
+    !this.state.selected.length ?
+      this.setState({selected: [index]}) :
+      this.state.selected.includes(index) ?
+      this.setState({selected: []}) :
+      this.setState({selected: [index]})
+  }
+
   renderCards = (houseArray) => (
     houseArray.length &&
-    houseArray.map((house, index) => <Card houseInfo={house} key={'House Card ' + index} />)
+    houseArray.map((house, index) => (
+      <div className={this.state.selected.includes(index) ? 'selected' : 'not-selected'} onClick={()=>this.selectCard(index)} key={'House Card ' + index} >
+        <Card houseInfo={house} />
+      </div>
+      )
+    )
   )
+  
 
   render() {
     return (
@@ -24,15 +44,12 @@ class App extends Component {
           <h2>Welcome to Westeros</h2>
         </div>
         <div className='Display-info'>
-          {this.renderCards(this.props.houseData)}
+          {this.props.houseData.length ? this.renderCards(this.props.houseData) : <p>hey</p>}
         </div>
       </div>
     );
   }
 }
-
-App.propTypes = {
-};
 
 const mapStateToProps = store => (
   { houseData: store.houses }

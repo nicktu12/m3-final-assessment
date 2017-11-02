@@ -37,3 +37,15 @@ h2 {
 .cards p span {
   font-family: sans-serif;
 }
+
+.selected {
+  border: 10px solid red;
+}
+
+.not-selected section {
+  display: none;
+}
+
+.selected section {
+  display: initial;
+}
