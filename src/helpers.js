@@ -7,17 +7,26 @@ export const fetchHelper = (url) => {
 export const arrayCleaner = (array) => array.join(', ')
 
 export const swornApi = (array) => {
-  array.map(house => {
-    console.log(house.swornMembers)
-    house.swornMembers.map(member => {
-      fetch(('https://galvanize-cors-proxy.herokuapp.com/' + member), {
+  return array.map(house => {
+    return house.swornMembers.map(member => {
+      const swornArray = [];
+      fetch('http://localhost:3001/api/v1/character', {
         method: 'post',
         headers: {
-          'Accept': 'application/json',
           'Content-type': 'application/json'
         },
-        body: JSON.stringify(member)
-      }).then(res=>console.log(res))
+        body: JSON.stringify({ url: member })
+      })
+      .then(res=>res.json())
+      .then(parseRes=>swornArray.push(parseRes))
+      .catch(e=>alert(e))
+      return swornArray
     })
+  })
+}
+
+export const masher = (arr1, arr2) => {
+  return arr1.map((arr, index)=>{
+    return Object.assign({}, arr1[index], {swornMembers: arr2[index]}) 
   })
 }
