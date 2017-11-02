@@ -1,3 +1,5 @@
-export const fetchHelper = () => {
-  console.log('api goes here!')
+export const fetchHelper = (url) => {
+  return fetch(url)
+    .then(res => res.json())
+    .then(parseRes => parseRes)
 }
