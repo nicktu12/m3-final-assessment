@@ -2,12 +2,21 @@ import React, { Component } from 'react';
 import PropTypes, { shape, func, string } from 'prop-types';
 import logo from './logo.svg';
 import './App.css';
+import Card from '../Card/Card';
 import { connect } from 'react-redux';
 import { fakeAction, initFetchAction } from '../../actions';
 class App extends Component {
   
   componentDidMount() {
     this.props.initFetch();
+  }
+
+  renderCards = (houseArray) => {
+    return houseArray.map((house, index) => {
+      return(
+        <Card houseInfo={house} /> 
+      )
+    })
   }
 
   render() {
@@ -22,6 +31,7 @@ class App extends Component {
           }}> FAKE ACTION</button>
         </div>
         <div className='Display-info'>
+          {this.renderCards([1,2,3])}
         </div>
       </div>
     );
