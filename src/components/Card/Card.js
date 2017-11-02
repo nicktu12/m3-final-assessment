@@ -2,7 +2,7 @@ import React from 'react';
 import { arrayCleaner } from '../../helpers';
 
 const Card = (house) => {
-  return(
+  return (
     <div className="cards">
       <h3>{house.houseInfo.name}</h3>
       { house.houseInfo.founded && <p><span>Founded:</span> {house.houseInfo.founded}</p> }
@@ -12,10 +12,10 @@ const Card = (house) => {
       <p><span>Ancestral Weapons:</span> {arrayCleaner(house.houseInfo.ancestralWeapons)}</p>
       { house.houseInfo.words && <p><span>House Words:</span> "{house.houseInfo.words}"</p> }
       <section>
-        <p>Sworn Members: </p>
+        <p>Sworn Members: {memberCleaner(...house.houseInfo.swornMembers)}</p>
       </section>
     </div>
-  )
-}
+  );
+};
 
 export default Card;

@@ -11,7 +11,7 @@ class App extends Component {
 
     this.state = {
       selected: []
-    }
+    };
   } 
   componentDidMount() {
     this.props.initFetch();
@@ -21,8 +21,8 @@ class App extends Component {
     !this.state.selected.length ?
       this.setState({selected: [index]}) :
       this.state.selected.includes(index) ?
-      this.setState({selected: []}) :
-      this.setState({selected: [index]})
+        this.setState({selected: []}) :
+        this.setState({selected: [index]});
   }
 
   renderCards = (houseArray) => (
@@ -31,12 +31,11 @@ class App extends Component {
       <div className={this.state.selected.includes(index) ? 'selected' : 'not-selected'} onClick={()=>this.selectCard(index)} key={'House Card ' + index} >
         <Card houseInfo={house} />
       </div>
-      )
-    )
+    ))
   )
   
   renderLoading = () => {
-    return (<img src={require('./wolf.gif')} alt='loading icon' />)
+    return (<img src={require('./wolf.gif')} alt='loading icon' />);
   }
 
   render() {
