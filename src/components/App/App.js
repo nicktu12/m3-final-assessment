@@ -4,7 +4,7 @@ import logo from './logo.svg';
 import './App.css';
 import Card from '../Card/Card';
 import { connect } from 'react-redux';
-import { fakeAction, initFetchAction } from '../../actions';
+import { initFetchAction } from '../../actions';
 class App extends Component {
   
   componentDidMount() {
@@ -32,8 +32,6 @@ class App extends Component {
 }
 
 App.propTypes = {
-  fake: PropTypes.string,
-  fakeAction: func.isRequired
 };
 
 const mapStateToProps = store => (
@@ -41,8 +39,6 @@ const mapStateToProps = store => (
 )
 
 const mapDispatchToProps = dispatch => (
-  { fakeAction: () => dispatch(fakeAction()),
-    initFetch: () => dispatch(initFetchAction())
-});
+  { initFetch: () => dispatch(initFetchAction()) });
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);
