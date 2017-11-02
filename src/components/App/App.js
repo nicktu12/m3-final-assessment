@@ -12,7 +12,8 @@ class App extends Component {
   }
 
   renderCards = (houseArray) => (
-    houseArray.map((house, index) => <Card houseInfo={house} />)
+    houseArray.length &&
+    houseArray.map((house, index) => <Card houseInfo={house} key={'House Card ' + index} />)
   )
 
   render() {
@@ -27,7 +28,7 @@ class App extends Component {
           }}> FAKE ACTION</button>
         </div>
         <div className='Display-info'>
-          {this.props.houseData && this.renderCards(this.props.houseData)}
+          {this.renderCards(this.props.houseData)}
         </div>
       </div>
     );
