@@ -35,6 +35,9 @@ class App extends Component {
     )
   )
   
+  renderLoading = () => {
+    return (<img src={require('./wolf.gif')} alt='loading icon' />)
+  }
 
   render() {
     return (
@@ -44,7 +47,7 @@ class App extends Component {
           <h2>Welcome to Westeros</h2>
         </div>
         <div className='Display-info'>
-          {this.props.houseData.length ? this.renderCards(this.props.houseData) : <p>hey</p>}
+          {this.props.houseData.length ? this.renderCards(this.props.houseData) : this.renderLoading()}
         </div>
       </div>
     );
